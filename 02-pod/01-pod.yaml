@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hello-pod
+  namespace: mechanoidstore
+spec:
+# list of containers
+  containers:
+  - name: hello-pod
+    image: nginx
+    ports:
+    - containerPort: 80

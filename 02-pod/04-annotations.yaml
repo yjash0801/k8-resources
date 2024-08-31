@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: annotations-demo
+  labels:
+    name: Jashwanth
+    role: "DevOpsEngineer"
+  annotations:
+    com.mechanoidstore.name.role: "Jashwanth DevOpsEngineer"
+    jenkins.url: "https://jenkins.com/roboshop/catalogue#45"
+spec:
+# list of containers
+  containers:
+  - name: hello-pod
+    image: nginx
+    ports:
+    - containerPort: 80

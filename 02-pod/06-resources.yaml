@@ -4,9 +4,11 @@ metadata:
   name: resources-pod
   namespace: mechanoidstore
 spec:
+  # list of containers
   containers:
   - name: resources-pod
     image: nginx
+    # port will not open just for information
     ports:
     - containerPort: 80
     resources:

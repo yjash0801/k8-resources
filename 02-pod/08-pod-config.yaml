@@ -21,3 +21,19 @@ spec:
         configMapKeyRef:
           name: devopsconfig
           key: Role
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: config-pod-1
+spec:
+# list of containers
+  containers:
+  - name: config-pod-1
+    image: nginx
+# list of containers
+    ports:
+    - containerPort: 80
+    envFrom:
+    - configMapRef:
+        name: devopsconfig

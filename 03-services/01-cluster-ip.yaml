@@ -22,6 +22,6 @@ spec:
     app: nginx
     demo: service
   ports:
-  - name: TCP
+  - protocol: TCP
     port: 80 #service port
     targetPort: 80 #container port

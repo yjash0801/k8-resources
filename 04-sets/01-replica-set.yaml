@@ -20,4 +20,5 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx
+        # image: nginx this is for the previous version
+        image: nginx:mainline-alpine3.20-perl # Now to updated for the new version.

@@ -61,13 +61,13 @@ spec:
             subPath: filebeat.yml
         resources:
 
-    volumes:
-    - name:  nginx-logs #vol 1
-      emptyDir: {}
+      volumes:
+      - name:  nginx-logs #vol 1
+        emptyDir: {}
 
-    - name: filebeat-config #vol 2
-      configMap:
-        name: filebeat-config
-        items:
-        - key: filebeat.yml
-          path: filebeat.yml
+      - name: filebeat-config #vol 2
+        configMap:
+          name: filebeat-config
+          items:
+          - key: filebeat.yml
+            path: filebeat.yml

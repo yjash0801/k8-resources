@@ -12,7 +12,7 @@ spec:
   persistentVolumeReclaimPolicy: Retain
   csi:
     driver: efs.csi.aws.com
-    volumeHandle: fs-0301598d422ec4e5e
+    volumeHandle: fs-016a860b1f7383cac
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -41,7 +41,7 @@ spec:
     - name: nginx-data
       mountPath: /usr/share/nginx/html
   nodeSelector:
-    zone: 1d
+    zone: 1b
   volumes:
   - name: nginx-data
     persistentVolumeClaim:
@@ -57,5 +57,5 @@ spec:
     demo: efs-static
   ports:
   - protocol: TCP
-    port: 80 #service port
-    targetPort: 80 #container port
+    port: 80 #service-port
+    targetPort: 80 #container-port
